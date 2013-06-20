@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+        <title>GreenTicket | Ingressos</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <div id="principal">
+                <div id ="topo">
+                    <div id ="painelTitulo">
+                        <img id="logo" src="logobg.png" alt="" />
+                        <p id="titulo"><negrito>green</negrito>ticket</p>
+                        <p id="subtitulo">compra de ingressos</p>
+                    </div>                
+                </div>
+
+                <div id="conteudo">
+
+                    <div id="destaque"> 
+
+                    </div>    
+                    <div id="lista">
+                        <h:dataTable value="#{VendaIngressosJSFManagedBean.listaEventos}" var="item">
+                            <h:column>
+                                <h:outputText class="textoLista" value="#{item.nome}"/>
+                            </h:column>
+                        </h:dataTable>
+                    </div>
+                </div>
+
+                <div id="rodape">
+
+                </div>
+
+            </div>
+        </f:view>
+    </h:body>
+</html>
